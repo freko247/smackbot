@@ -1,0 +1,13 @@
+Pillow==3.0.0
+argparse==1.2.1
+beautifulsoup4==4.4.1
+protobuf==3.0.0-alpha-1
+pycrypto==2.6.1
+python-axolotl==0.1.7
+python-axolotl-curve25519==0.1
+python-dateutil==2.4.2
+requests==2.8.1
+six==1.10.0
+wikipedia==1.4.0
+wsgiref==0.1.2
+yowsup2==2.4
