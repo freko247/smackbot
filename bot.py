@@ -1,12 +1,13 @@
 import logging
 
 from quotes import qod
-from wiki import wiki_summary
+from wiki import wiki_summary, wiki_search
 
 def reader(message):
     commands = {'/qod': qod,
                 '/ping': lambda x: 'pong',
-                '/wiki': wiki_summary
+                '/wiki': wiki_search,
+                '/wiki_summary': wiki_summary
                 }
     if message.startswith('/'):
         try:
