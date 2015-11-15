@@ -4,7 +4,8 @@ from quotes import qod
 
 
 def reader(message):
-    commands = {'/qod': qod
+    commands = {'/qod': qod,
+                '/ping': lambda: 'pong',
                 }
     if message.startswith('/'):
         try:
@@ -13,3 +14,5 @@ def reader(message):
         except:
             logging.exception('Could not execute command: %s' % message)
             return message
+    else:
+        return None
