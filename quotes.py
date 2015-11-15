@@ -4,7 +4,7 @@ import logging
 import requests
 
 
-def qod():
+def qod(message):
     url = 'http://api.theysaidso.com/qod'
     response = requests.get(url)
     try:
