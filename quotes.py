@@ -10,7 +10,7 @@ def qod():
     try:
         if response.status_code == 200:
             quote = response.json()
-            return '%(quote)s - %(author)s' % quote['contents'][0]
+            return '%(quote)s - %(author)s' % quote['contents']['quotes'][0]
         else:
             logging.warning(response.reason)
             return None
