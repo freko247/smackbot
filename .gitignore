@@ -1,5 +1,6 @@
 *.pyc
 *.log
+*.pem
 venv
 dependencies.yml
 settings.py
