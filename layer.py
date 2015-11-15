@@ -20,12 +20,17 @@ class EchoLayer(YowInterfaceLayer):
                 messageProtocolEntity.getParticipant()
             )
             message = reader(messageProtocolEntity.getBody())
-            outgoingMessageProtocolEntity = TextMessageProtocolEntity(
-                message,
-                to=messageProtocolEntity.getFrom())
-
-            self.toLower(receipt)
-            self.toLower(outgoingMessageProtocolEntity)
+            def send_text_message(body):
+                outgoingMessageProtocolEntity = TextMessageProtocolEntity(
+                    body,
+                    to=messageProtocolEntity.getFrom())
+                self.toLower(receipt)
+                self.toLower(outgoingMessageProtocolEntity)
+            if isinstance(message, list):
+                for part in message:
+                    send_text_message(part)
+            else:
+                send_text_message(message)
 
     @ProtocolEntityCallback("receipt")
     def onReceipt(self, entity):
