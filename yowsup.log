@@ -1,0 +1,32 @@
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+ERROR:root:Could not execute command: /qod
+Traceback (most recent call last):
+  File "/home/freko/Projects/smackbot/bot.py", line 11, in reader
+    message = commands[message.split()[1:]]()
+TypeError: unhashable type: 'list'
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+ERROR:root:Could not execute command: /qod
+Traceback (most recent call last):
+  File "/home/freko/Projects/smackbot/bot.py", line 11, in reader
+    command = commands[message.split()[1:]]
+TypeError: unhashable type: 'list'
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+ERROR:root:Could not execute command: /qod
+Traceback (most recent call last):
+  File "/home/freko/Projects/smackbot/bot.py", line 11, in reader
+    command = commands[message.split()]
+TypeError: unhashable type: 'list'
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): api.theysaidso.com
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): api.theysaidso.com
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): api.theysaidso.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): api.theysaidso.com
+WARNING:yowsup.stacks.yowstack:Implicit declaration of parallel layers in a tuple is deprecated, pass a YowParallelLayer instead
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): api.theysaidso.com
+WARNING:root:Too Many Requests
