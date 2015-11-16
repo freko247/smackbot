@@ -22,9 +22,7 @@ def commander(message):
 def scan_and_react(message):
     set_reactions = []
     reaction_text = ''
-    print type(message)
     for key in interactions.keys():
-        print key.encode('utf-8')
         enc = key.encode('utf-8')
         if enc in message.lower():
             reaction = interactions[key]
@@ -35,6 +33,6 @@ def scan_and_react(message):
 
 def reader(message):
     if message.startswith('/'):
-        return reader(message)
+        return commander(message)
     else:
         return scan_and_react(message)
