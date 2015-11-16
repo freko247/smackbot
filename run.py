@@ -20,22 +20,23 @@ logging.basicConfig(filename='yowsup.log', level='INFO')
 CREDENTIALS = (whatsapp_phone, whatsapp_password)
 
 if __name__ == "__main__":
-    layers = (
-        EchoLayer,
-        (YowAuthenticationProtocolLayer, YowMessagesProtocolLayer,
-         YowReceiptProtocolLayer, YowAckProtocolLayer)
-    ) + YOWSUP_CORE_LAYERS
+    while 1:
+        layers = (
+            EchoLayer,
+            (YowAuthenticationProtocolLayer, YowMessagesProtocolLayer,
+             YowReceiptProtocolLayer, YowAckProtocolLayer)
+        ) + YOWSUP_CORE_LAYERS
 
-    stack = YowStack(layers)
-    # setting credentials
-    stack.setProp(YowAuthenticationProtocolLayer.PROP_CREDENTIALS, CREDENTIALS)
-    # whatsapp server address
-    stack.setProp(YowNetworkLayer.PROP_ENDPOINT, YowConstants.ENDPOINTS[0])
-    stack.setProp(YowCoderLayer.PROP_DOMAIN, YowConstants.DOMAIN)
-    # info about us as WhatsApp client
-    stack.setProp(YowCoderLayer.PROP_RESOURCE, env.CURRENT_ENV.getResource())
+        stack = YowStack(layers)
+        # setting credentials
+        stack.setProp(YowAuthenticationProtocolLayer.PROP_CREDENTIALS, CREDENTIALS)
+        # whatsapp server address
+        stack.setProp(YowNetworkLayer.PROP_ENDPOINT, YowConstants.ENDPOINTS[0])
+        stack.setProp(YowCoderLayer.PROP_DOMAIN, YowConstants.DOMAIN)
+        # info about us as WhatsApp client
+        stack.setProp(YowCoderLayer.PROP_RESOURCE, env.CURRENT_ENV.getResource())
 
-    # sending the connect signal
-    stack.broadcastEvent(YowLayerEvent(YowNetworkLayer.EVENT_STATE_CONNECT))
+        # sending the connect signal
+        stack.broadcastEvent(YowLayerEvent(YowNetworkLayer.EVENT_STATE_CONNECT))
 
-    stack.loop()  # this is the program mainloop
+        stack.loop()  # this is the program mainloop
